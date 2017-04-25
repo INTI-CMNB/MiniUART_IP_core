@@ -1,0 +1,11 @@
+Revision: 1.20 - mié dic 29 16:07:21 ART 2010
+Entity: UART_C | Part: xc3s1500-fg456-4 | Optimized for: Area_Strong | Constrained: no
+Synthesis tool: Xilinx 11.3 L.57 (lin)
+xil_project.pl version: 0.4.2
+
+Flip Flops:    39/26624  0.15 %
+LUTs:          63/26624  0.24 % (61/2 logic/route 96.83 %)
+Slices:        49/13312  0.37 %
+Max. Clock:  186.74 MHz ( 5.36 ns)
+
+

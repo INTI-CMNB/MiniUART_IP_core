@@ -1,0 +1,7 @@
+# xil_tools group 1
+miniuart
+Work/miniuart_pkg.vhdl
+Txunit.vhdl
+Rxunit.vhdl
+utils.vhdl
+miniuart_wb.vhdl

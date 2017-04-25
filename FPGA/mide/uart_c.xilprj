@@ -1,0 +1,5 @@
+Board=gr_xc3s_1500
+Project=uart_c
+Top=UART_C
+Goal=Area_Strong
+Include=miniuart

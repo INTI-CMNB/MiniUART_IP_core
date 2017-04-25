@@ -1,0 +1,11 @@
+Revision: 1.20 - mié dic 29 16:03:14 ART 2010
+Entity: TxUnit | Part: xc3s1500-fg456-4 | Optimized for: Area_Strong | Constrained: no
+Synthesis tool: Xilinx 11.3 L.57 (lin)
+xil_project.pl version: 0.4.2
+
+Flip Flops:    13/26624  0.05 %
+LUTs:          17/26624  0.06 % (17/0 logic/route 100.00 %)
+Slices:        13/13312  0.10 %
+Max. Clock:  195.47 MHz ( 5.12 ns)
+
+
