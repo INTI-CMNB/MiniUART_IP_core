@@ -36,7 +36,7 @@
 ----                   miniuart.UART                                      ----
 ---- Target FPGA:      Spartan                                            ----
 ---- Language:         VHDL                                               ----
----- Wishbone:         No                                                 ----
+---- Wishbone:         SLAVE (rev B.3)                                    ----
 ---- Synthesis tools:  Xilinx Release 9.2.03i - xst J.39                  ----
 ---- Simulation tools: GHDL [Sokcho edition] (0.2x)                       ----
 ---- Text editor:      SETEdit 0.5.x                                      ----
@@ -75,8 +75,8 @@ use miniuart.UART.all;
 entity UART_C is
   generic(
      BRDIVISOR  : positive:=1;     -- Baud rate divisor
-     WIP_ENABLE : boolean:=false;  -- WIP flag enable
-     AUX_ENABLE : boolean:=false); -- Aux. register enable
+     WIP_ENABLE : std_logic:='0';  -- WIP flag enable
+     AUX_ENABLE : std_logic:='0'); -- Aux. register enable
   port (
      -- Wishbone signals
      wb_clk_i  : in  std_logic;  -- clock
@@ -137,7 +137,7 @@ begin
    intrx_o <= rxav;
    sreg(0) <= not txbusy;
    sreg(1) <= rxav;
-   sreg(2) <= wip when WIP_ENABLE else '0';
+   sreg(2) <= wip when WIP_ENABLE='1' else '0';
    sreg(7 downto 3) <= "00000";
    
    -- Implements WishBone data exchange.
@@ -150,7 +150,7 @@ begin
                sreg;                          -- read status reg
 
    aux_reg_enabled:
-   if AUX_ENABLE generate
+   if AUX_ENABLE='1' generate
       do_aux_reg:
       process (wb_clk_i)
       begin
@@ -165,7 +165,7 @@ begin
    end generate aux_reg_enabled;
 
    aux_reg_disabled:
-   if AUX_ENABLE generate
+   if AUX_ENABLE='0' generate
       aux_reg_o <= (others => '0');
    end generate aux_reg_disabled;
 

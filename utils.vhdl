@@ -51,7 +51,7 @@ use IEEE.std_logic_1164.all;
 entity BRGen is
   generic(
      COUNT : positive);-- Count revolution
-  port (
+  port(
      clk_i   : in  std_logic;  -- Clock
      reset_i : in  std_logic;  -- Reset input
      ce_i    : in  std_logic;  -- Chip Enable

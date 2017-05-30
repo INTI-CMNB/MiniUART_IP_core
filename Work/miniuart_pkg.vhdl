@@ -2,6 +2,8 @@
 ----                                                                      ----
 ----  Mini UART package file                                              ----
 ----                                                                      ----
+----  This file is part FPGA Libre project http://fpgalibre.sf.net/       ----
+----                                                                      ----
 ----  Description:                                                        ----
 ----  Package file to ease the use of the miniuart.                       ----
 ----                                                                      ----
@@ -18,7 +20,7 @@
 ---- Copyright (c) 2006-2008 Salvador E. Tropea <salvador en inti gov ar> ----
 ---- Copyright (c) 2005-2008 Instituto Nacional de Tecnología Industrial  ----
 ----                                                                      ----
----- Covered by the GPL license.                                          ----
+---- Distributed under the GPL v2 or newer license                        ----
 ----                                                                      ----
 ------------------------------------------------------------------------------
 ----                                                                      ----
@@ -47,8 +49,8 @@ package UART is
    component UART_C is
      generic(
         BRDIVISOR  : positive:=1;     -- Baud rate divisor
-        WIP_ENABLE : boolean:=false;  -- WIP flag enable
-        AUX_ENABLE : boolean:=false); -- Aux. register enable
+        WIP_ENABLE : std_logic:='0';  -- WIP flag enable
+        AUX_ENABLE : std_logic:='0'); -- Aux. register enable
      port (
         -- Wishbone signals
         wb_clk_i  : in  std_logic;  -- clock

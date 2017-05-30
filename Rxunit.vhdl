@@ -27,7 +27,7 @@
 ------------------------------------------------------------------------------
 ----                                                                      ----
 ---- Design unit:      RxUnit(Behaviour) (Entity and architecture)        ----
----- File name:        rx_unit.vhdl                                       ----
+---- File name:        Rxunit.vhdl                                        ----
 ---- Note:             None                                               ----
 ---- Limitations:      None known                                         ----
 ---- Errors:           None known                                         ----
