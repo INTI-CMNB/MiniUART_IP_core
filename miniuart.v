@@ -69,9 +69,9 @@
 
 module UART_C
    #(
-     BRDIVISOR=1,  // Baud rate divisor
-     WIP_ENABLE=0, // WIP flag enable
-     AUX_ENABLE=0) // Aux. register enable
+     parameter BRDIVISOR=1,  // Baud rate divisor
+     parameter WIP_ENABLE=0, // WIP flag enable
+     parameter AUX_ENABLE=0) // Aux. register enable
    (
     // WISHBONE signals
     input        wb_clk_i,   // Clock
